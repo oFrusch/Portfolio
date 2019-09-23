@@ -14,6 +14,7 @@ import {
 } from "react-mdl";
 
 import MembersOnlyCard from "./cards/MembersOnlyCard";
+import EmailyCard from "./cards/EmailyCard";
 
 class Project extends React.Component {
   constructor(props) {
@@ -25,7 +26,12 @@ class Project extends React.Component {
 
   toggleCategories() {
     if (this.state.activeTab === 0) {
-      return <MembersOnlyCard />;
+      return (
+        <div className="projects-grid">
+          <MembersOnlyCard />
+          <EmailyCard />
+        </div>
+      );
     }
 
     if (this.state.activeTab === 1) {
@@ -57,13 +63,11 @@ class Project extends React.Component {
           <Tab>University</Tab>
         </Tabs>
 
-        <section className="projects-grid">
-          <Grid className="projects-grid">
-            <Cell col={12}>
-              <div className="content"> {this.toggleCategories()} </div>
-            </Cell>
-          </Grid>
-        </section>
+        <Grid>
+          <Cell col={12}>
+            <div className="content"> {this.toggleCategories()} </div>
+          </Cell>
+        </Grid>
       </div>
     );
   }

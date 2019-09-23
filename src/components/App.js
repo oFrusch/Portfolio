@@ -17,7 +17,7 @@ class App extends React.Component {
         <Layout>
           <Header className="header-color" title="Owen Carpenter" scroll>
             <Navigation>
-              <a href="/">Landing</a>
+              <a href="/">Home</a>
               <a href="/Resume">Resume</a>
               <a href="/Projects">Projects</a>
               <a href="/About">About</a>
@@ -26,7 +26,7 @@ class App extends React.Component {
           </Header>
           <Drawer title="Explore">
             <Navigation>
-              <a href="/">Landing</a>
+              <a href="/">Home</a>
               <a href="/Resume">Resume</a>
               <a href="/Projects">Projects</a>
               <a href="/About">About</a>
